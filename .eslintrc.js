@@ -1,20 +1,21 @@
+// .eslintrc.js
 module.exports = {
   root: true,
   env: {
     browser: true,
     node: true,
-    jest: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   plugins: ['prettier', '@typescript-eslint'],
   rules: {
+    'prefer-const': 'off',
     'prettier/prettier': [
       'error',
       {
-        endOfLine: "auto",
         singleQuote: true,
         semi: true,
         useTabs: false,
@@ -22,10 +23,9 @@ module.exports = {
         printWidth: 80,
         bracketSpacing: true,
         arrowParens: 'avoid',
+        endOfLine: 'auto',
       },
     ],
-    '@typescript-eslint/no-explicit-any': 'off',
-    'prefer-const': 'off',
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
