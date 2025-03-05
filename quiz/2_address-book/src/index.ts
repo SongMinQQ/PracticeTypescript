@@ -104,5 +104,6 @@ class AddressBook {
   }
   /* ------------------------------------------------ */
 }
-
+// container 클래스는 반드시 HTML div 태그일 것이다.
+var div = document.querySelector('.container') as HTMLDivElement;
 new AddressBook();
